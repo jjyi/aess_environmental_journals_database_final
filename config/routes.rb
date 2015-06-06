@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  root 'journals#index'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
+
   ActiveAdmin.routes(self)
   # Routes for the Journal resource:
   # CREATE

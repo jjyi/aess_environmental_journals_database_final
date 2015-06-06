@@ -20,11 +20,10 @@
 <table class="table table-striped table-hover">
     <thead>
       <tr>
-        <th>Journal ID</th>
-        <th>Journal Name</th>
+        <th><%= sort_link(@q, :journal_name) %></th>
         <th>Content Guide URL</th>
-        <th>Issues per Year</th>
-        <th>Topic</th>
+        <th><%= sort_link(@q, :issues_per_yr) %></th>
+        <th><%= sort_link(@q, :journal_topic) %></th>
       </tr>
     </thead>
     <tbody>
@@ -32,7 +31,6 @@
        <% @journals.each do |journal| %>
        <div class="row isotope-container">
         <div class="col-xs-12 isotope-item">
-          <td>#<%= journal.id %></td>
           <td><a href="<%= journal.journal_url %>"target="_blank"><%= journal.journal_name %></a></td>
           <td><a href="<%= journal.content_guide_url %>"target="_blank">Content Guide</a></td>
           <td><%= journal.issues_per_yr %></td>
