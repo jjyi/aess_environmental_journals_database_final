@@ -1,7 +1,7 @@
 class JournalsController < ApplicationController
   def index
     @q = Journal.ransack(params[:q])
-    @journals = @q.result
+    @journals = @q.result(:distinct => true)
   end
 
   def show
