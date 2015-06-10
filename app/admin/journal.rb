@@ -14,6 +14,5 @@ permit_params :journal_name, :issues_per_yr,:journal_url,:content_guide_url,:jou
   #   permitted << :other if resource.something?
   #   permitted
   # end
-
-
+actions :index, :show, :new, :create, :update, :edit, :destroy
 end
